@@ -38,7 +38,7 @@ const Testimonial = () => {
     const totalLength = testimonialsData.length;
 
     return (
-        <div className='testimonial'>
+        <div className='testimonial' id='testimonials'>
 
             <AnimatePresence>
                 <motion.div

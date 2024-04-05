@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import Logo from '../../assets/logo.png';
 import hero_image from '../../assets/hero_image.png';
@@ -9,32 +9,68 @@ import Menu from '../../assets/bars.png';
 
 import { motion } from "framer-motion"
 import CountUp from 'react-countup';
+import { Link } from 'react-scroll';
 
 const Homepage = () => {
 
     const mobile = window.innerWidth <= 768 ? true : false;
+    const [openMenu, setOpenMenu] = useState(false)
 
     return (
         <>
-            <div className="main">
+            <div className="main" id='home'>
 
                 <div className="blur homepage-blur"></div>
                 <div className="left-homepage">
 
-                    <header className='nav'>
+                    <div className='nav'>
                         <img src={Logo} alt="logo" style={{ width: '10rem', height: '3rem' }} />
                         {
-                            mobile ? <img src={Menu} alt="menu-bar" width={50} height={30} />
+                            (mobile === true && openMenu === false) ?
+                                (<div className='menu' onClick={() => setOpenMenu(true)}>
+                                    <img src={Menu} alt="menu-bar" width={35} height={30} />
+                                </div>)
                                 :
-                                    <ul className='list'>
-                                    <li>Home</li>
-                                    <li>Programs</li>
-                                    <li>Why Us</li>
-                                    <li>Plans</li>
-                                    <li>Testimonials</li>
-                                </ul>
+                                (<ul className='list'>
+                                    <li>
+                                        <Link
+                                            onClick={() => setOpenMenu(false)}
+                                            to='home'
+                                            activeClass='active'
+                                            spy={true}
+                                            smooth={true}>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            onClick={() => setOpenMenu(false)}
+                                            to='program'
+                                            spy={true}
+                                            smooth={true}>Programs</Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            onClick={() => setOpenMenu(false)}
+                                            to='reason'
+                                            spy={true}
+                                            smooth={true}>Why Us</Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            onClick={() => setOpenMenu(false)}
+                                            to='plan-id'
+                                            spy={true}
+                                            smooth={true}>Plans</Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            onClick={() => setOpenMenu(false)}
+                                            to='testimonials'
+                                            spy={true}
+                                            smooth={true}>Testimonials</Link>
+                                    </li>
+                                </ul>)
                         }
-                    </header>
+                    </div>
 
                     <div className="ad-container">
                         <motion.div className='moving-ad-box'
