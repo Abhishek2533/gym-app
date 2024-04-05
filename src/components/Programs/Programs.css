@@ -1,0 +1,93 @@
+.programs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    font-weight: bold;
+    font-size: 4vw;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.programs-categories {
+    display: flex;
+    gap: 1rem;
+}
+
+.category {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    color: white;
+    background-color: rgb(139, 137, 137);
+}
+
+.category> :nth-child(1) {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+.category> :nth-child(2) {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.category> :nth-child(3) {
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.join-program {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.join-program>img {
+    width: 1rem;
+}
+
+.category:hover {
+    cursor: pointer;
+    background-color: rgba(255, 166, 0, 0.911);
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .programs {
+        margin-top: 8rem;
+    }
+    
+    .programs-categories {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+}
+
+
+@media screen and (max-width: 540px) {
+    .programs {
+        margin-top: 11rem;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .programs {
+        padding: 1rem;
+    }
+}
