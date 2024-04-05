@@ -63,8 +63,8 @@ body {
     z-index: 1;
 }
 
-.ad-container .ad-text {
-    z-index: 2;
+.ad-text {
+    z-index: 10;
 }
 
 .motto {
