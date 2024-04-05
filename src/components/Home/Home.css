@@ -282,7 +282,7 @@ body {
         position: fixed;
         right: 2rem;
         background-color: #363d42;
-        z-index: 15;
+        z-index: 99;
     }
 
     .ad-container {
