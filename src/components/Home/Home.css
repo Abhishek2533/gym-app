@@ -282,7 +282,7 @@ body {
         position: fixed;
         right: 2rem;
         background-color: #363d42;
-        z-index: 5;
+        z-index: 15;
     }
 
     .ad-container {
@@ -391,7 +391,7 @@ body {
 @media screen and (max-width: 380px) {
 
     .ad-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .motto {
