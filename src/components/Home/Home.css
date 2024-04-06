@@ -64,7 +64,7 @@ body {
 }
 
 .ad-text {
-    z-index: 10;
+    z-index: 99;
 }
 
 .motto {

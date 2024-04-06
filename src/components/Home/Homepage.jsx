@@ -14,6 +14,7 @@ import { Link } from 'react-scroll';
 const Homepage = () => {
 
     const mobile = window.innerWidth <= 768 ? true : false;
+    const smallDevice = window.innerWidth <= 520 ? true : false;
     const [openMenu, setOpenMenu] = useState(false)
 
     return (
@@ -28,7 +29,7 @@ const Homepage = () => {
                         {
                             (mobile === true && openMenu === false) ?
                                 (<div className='menu' onClick={() => setOpenMenu(true)}>
-                                    <img src={Menu} alt="menu-bar" width={35} height={30} />
+                                    <img src={Menu} alt="menu-bar" width={35} height={30} style={{ zIndex:  999 }} />
                                 </div>)
                                 :
                                 (<ul className='list'>
@@ -74,7 +75,7 @@ const Homepage = () => {
 
                     <div className="ad-container">
                         <motion.div className='moving-ad-box'
-                            initial={{ left: mobile ? '178px' : '238px' }}
+                            initial={{ left: mobile ? (smallDevice? '100px' : '178px') : '238px' }}
                             whileInView={{ left: '8px' }}
                             transition={{ type: 'tween', duration: 3 }}
                         ></motion.div>
