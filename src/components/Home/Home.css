@@ -274,7 +274,7 @@ body {
         padding: 0.5rem;
         position: fixed;
         right: 2rem;
-        z-index: 2;
+        z-index: 999;
     }
 
     .list {
@@ -368,6 +368,9 @@ body {
 
 
 @media screen and (max-width: 540px) {
+    .ad-container {
+        width: fit-content;
+    }
     .heart-rate {
         left: 1rem;
     }
@@ -426,7 +429,7 @@ body {
 
 @media screen and (max-width: 320px) {
     .ad-text {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     .motto {
