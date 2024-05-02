@@ -75,7 +75,7 @@ const Homepage = () => {
 
                     <div className="ad-container">
                         <motion.div className='moving-ad-box'
-                            initial={{ left: mobile ? (smallDevice? '100px' : '178px') : '238px' }}
+                            initial={{ left: mobile ? (smallDevice? '80px' : '150px') : '238px' }}
                             whileInView={{ left: '8px' }}
                             transition={{ type: 'tween', duration: 3 }}
                         ></motion.div>

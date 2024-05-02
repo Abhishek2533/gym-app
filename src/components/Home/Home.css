@@ -274,6 +274,7 @@ body {
         padding: 0.5rem;
         position: fixed;
         right: 2rem;
+        z-index: 2;
     }
 
     .list {
