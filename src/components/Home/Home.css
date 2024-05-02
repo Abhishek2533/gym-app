@@ -369,7 +369,7 @@ body {
 
 @media screen and (max-width: 540px) {
     .ad-container {
-        width: fit-content;
+        width: 100%;
     }
     .heart-rate {
         left: 1rem;
