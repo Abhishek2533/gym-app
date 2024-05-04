@@ -65,6 +65,12 @@
 
 
 
+@media screen and (768px <= width <=1024px) {
+    .heading:nth-child(3) {
+        font-size: 3.7vw;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .programs {
